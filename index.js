@@ -33,6 +33,7 @@ const addNewGoal = () => {
     if(duplicateConfirm)
         {
             alert("This goal already exists!");
+            return;
         }
     
 
