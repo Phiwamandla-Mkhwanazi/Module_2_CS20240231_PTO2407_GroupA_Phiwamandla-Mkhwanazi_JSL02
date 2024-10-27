@@ -25,7 +25,9 @@ const addNewGoal = () => {
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
     const duplicateCheckGoals = goalList.querySelectorAll('li');
-    let duplicateConfirm = false;
+    
+    /*For Debugging Purposes*/ 
+    let duplicateConfirm = true;
     
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
