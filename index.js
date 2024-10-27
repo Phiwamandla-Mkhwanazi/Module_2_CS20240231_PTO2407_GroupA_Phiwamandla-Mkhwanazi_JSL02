@@ -26,14 +26,6 @@ const addNewGoal = () => {
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
     const duplicateCheckGoals = goalList.querySelectorAll('li');
     
-    /*Debugging Purposes*/
-    console.clear();
-
-    for(let i = 0; i < duplicateCheckGoals.length; i++)
-        {
-            console.log(`Goal ${i + 1} : `,duplicateCheckGoals[i].textContent);
-        }
-
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
@@ -48,6 +40,8 @@ const addNewGoal = () => {
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;  
     goalList.appendChild(newGoal);
+
+    document.querySelector('#goalInput').value = '';
 };
 
 // Add event listener to the goal submit button
