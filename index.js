@@ -40,7 +40,13 @@ const addNewGoal = () => {
         }
     
     const newGoal = document.createElement('li');
-    newGoal.textContent = goalInput;  
+    newGoal.textContent = goalInput;
+    
+    // Removing a goal item -> from lesson 3. DOMinate Your Fitness: Creating and Removing Elements (Scrimba)
+    newGoal.addEventListener('click', () => {
+        goalList.removeChild(newGoal);
+    });
+    
     goalList.appendChild(newGoal);
 
     document.querySelector('#goalInput').value = '';
