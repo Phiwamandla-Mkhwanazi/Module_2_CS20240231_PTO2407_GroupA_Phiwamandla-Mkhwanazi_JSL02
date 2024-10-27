@@ -26,15 +26,18 @@ const addNewGoal = () => {
     let duplicateConfirm = false;
     
     /*=========Logic Comes Here===========*/
-    for (let i = 0; i < duplicateCheckGoals.length; i++) {
+    for (let i = 0; i < duplicateCheckGoals.length; i++) 
+    {
+        duplicateCheckGoals[i].style.border = '';
         if (duplicateCheckGoals[i].textContent === goalInput) {
             duplicateConfirm = true;
+            duplicateCheckGoals[i].style.border = '2px solid yellow';
             break; 
         }
     }
     
     if(duplicateConfirm)
-        {
+        {            
             alert("This goal already exists!");
             return;
         }
@@ -43,7 +46,8 @@ const addNewGoal = () => {
     newGoal.textContent = goalInput;
     
     // Removing a goal item -> from lesson 3. DOMinate Your Fitness: Creating and Removing Elements (Scrimba)
-    newGoal.addEventListener('click', () => {
+    newGoal.addEventListener('click', () => 
+    {
         goalList.removeChild(newGoal);
     });
     
